@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # FastAPI Backend URL (Ensure FastAPI is running on your laptop)
-API_URL = "https://connecxite-backend.onrender.com/generate_message_generate_message_post"
+API_URL = "https://connecxite-backend.onrender.com/generate-message"
 
 # Sidebar for chat history
 with st.sidebar:
@@ -10,7 +10,7 @@ with st.sidebar:
     chat_history = st.session_state.get("chat_history", [])
 
     for chat in chat_history:
-        st.markdown(f"**You:** {chat['user_url']} → {chat['target_url']}")
+        st.markdown(f"**You:** {chat['user_url']} → {chat['target_url']}") 
 
     if st.button("Clear Chat"):
         st.session_state.chat_history = []
